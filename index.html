@@ -60,6 +60,10 @@
       font-style: italic;
     }
 
+    .contact-info {
+      margin-bottom: 40px;
+    }
+
     .contact-info p {
       font-size: 1.2rem;
       margin: 8px 0;
@@ -69,6 +73,8 @@
     .contact-info a {
       color: #FFD700;
       text-decoration: underline;
+      display: block;
+      margin-top: 5px;
     }
 
     .gallery {
@@ -76,7 +82,6 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin-top: 40px;
     }
 
     .gallery img {
@@ -84,6 +89,14 @@
       border-radius: 8px;
       border: 2px solid rgba(255,255,255,0.7);
       box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      z-index: 10;
+      box-shadow: 4px 4px 20px rgba(0,0,0,0.9);
     }
   </style>
 </head>
@@ -94,16 +107,16 @@
 
     <div class="contact-info">
       <p><strong>Cengiz Can</strong> 0 532 470 41 16</p>
-      <p><strong>Yiğit Efe CAN</strong> 0 534 826 02 80</p>
+      <a href="mailto:cc@cengizcan.cc">cc@cengizcan.cc</a>
 
-      <p><strong>E-posta:</strong></p>
-      <p><a href="mailto:cc@cengizcan.cc">cc@cengizcan.cc</a></p>
-      <p><a href="mailto:yec@cengizcan.cc">yec@cengizcan.cc</a></p>
+      <p><strong>Yiğit Efe CAN</strong> 0 534 826 02 80</p>
+      <a href="mailto:yec@cengizcan.cc">yec@cengizcan.cc</a>
     </div>
 
     <div class="gallery">
       <img src="https://th.bing.com/th/id/R.833ca8060b5ea53d5c86ed4e6942fd42?rik=psWqauYVhzzs5g&riu=http%3a%2f%2fwww.tempapano.com%2fwp-content%2fuploads%2fHIT-Supprot-Arm-Systems.png&ehk=V96yagFBAGfrjlvUVrlYMEZhwFsSXIWwFlh1qpoqrR0%3d&risl=&pid=ImgRaw&r=0" alt="Pano Kol" />
       <img src="https://th.bing.com/th/id/R.022a5ea59eceb66e73d28c4c5d5fecc0?rik=dnXcUPVVF9OVHQ&pid=ImgRaw&r=0" alt="Fan Filter" />
+      <img src="https://www.frmotomasyon.com.tr/resim/tempa-pano15.png" alt="Tempa Pano" />
     </div>
   </div>
 </body>
