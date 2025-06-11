@@ -5,47 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cengiz Can - Pano ve Ekipman</title>
   <style>
-    body {
+    body, html {
+      margin: 0; 
+      padding: 0; 
+      height: 100%;
       font-family: Arial, sans-serif;
-      margin: 30px;
-      background-color: #f4f4f4;
-      color: #333;
+      color: #fff;
       text-align: center;
+      position: relative;
+      overflow-x: hidden;
     }
+
+    /* Arka plan görseli ve koyu overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://www.tempapano.com/wp-content/uploads/sistem-cozumleri.jpg') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.5);
+      z-index: -2;
+    }
+
+    /* Üstüne yarı saydam siyah katman */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: -1;
+    }
+
+    .container {
+      padding: 40px 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     h1 {
-      color: #2c3e50;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
     }
-    .contact-info {
-      margin: 20px 0;
+
+    .contact-info p {
       font-size: 1.2rem;
+      margin: 5px 0;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
+
+    .contact-info a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+    }
+
     .gallery {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin-top: 30px;
     }
+
     .gallery img {
       max-width: 300px;
       border-radius: 8px;
-      border: 2px solid #ccc;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      border: 2px solid rgba(255,255,255,0.7);
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
     }
   </style>
 </head>
 <body>
-  <h1>Cengiz Can</h1>
-  <div class="contact-info">
-    <p><strong>Telefon:</strong> 0 532 470 41 16</p>
-    <p><strong>E-posta:</strong> <a href="mailto:cc@cengizcan.cc">cc@cengizcan.cc</a></p>
-  </div>
-
-  <h2>Pano ve Ekipman Görselleri</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Pano 1" />
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="Pano 2" />
-    <img src="https://images.unsplash.com/photo-1523475496153-3d6cc003182a?auto=format&fit=crop&w=400&q=80" alt="Pano Ekipman" />
-  </div>
-</body>
-</html>
+  <div class="container">
+    <h1>Cengiz Can</h1>
+    <div class="contact-info">
+      <p><strong>Telefon:</strong>
